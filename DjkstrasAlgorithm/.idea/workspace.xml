@@ -19,9 +19,13 @@
       <file leaf-file-name="ImplementDjkstrasAlgo.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ImplementDjkstrasAlgo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="250">
+              <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#150#151#0" expanded="true" />
+                <element signature="e#183#184#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -92,6 +96,10 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ImplementDjkstrasAlgo.java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -567,9 +575,13 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/ImplementDjkstrasAlgo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="250">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#150#151#0" expanded="true" />
+            <element signature="e#183#184#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
