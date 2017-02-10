@@ -45,7 +45,7 @@ class Graph
 
     public void addEdge(int v1, int v2, int len, int toll)
     {
-            adj[v1].add(new Road(v2, len, toll));
+        adj[v1].add(new Road(v2, len, toll));
 
     }
 
@@ -53,17 +53,17 @@ class Graph
     {
         int dist[] = new int[numVertices];
         int total_toll[] = new int[numVertices];
-        //boolean visited[] = new boolean[numVertices];
+        boolean visited[] = new boolean[numVertices];
 
         for (int i=1;i<numVertices;i++) {
             total_toll[i] = Integer.MAX_VALUE;
-            //visited[i] = false;
+            visited[i] = false;
         }
         dist[src] = 0;
         total_toll[src] = 0;
         for (int count=1;count<numVertices-1;count++){
-            int city = minToll(total_toll);
-            //visited[city] = true;
+            int city = minToll(total_toll, visited);
+            visited[city] = true;
             if (city==numVertices-1)
                 break;
             Iterator<Road> iterator = adj[city].listIterator();
@@ -73,7 +73,7 @@ class Graph
                 int road_length = road.road_length;
                 int toll = road.toll;
 
-                if(total_toll[city]!=Integer.MAX_VALUE && total_toll[city] + toll < total_toll[dest]) {
+                if(!visited[dest] && total_toll[city]!=Integer.MAX_VALUE && total_toll[city] + toll < total_toll[dest]) {
                     dist[dest] = dist[city] + road_length;
                     total_toll[dest] = total_toll[city] + toll;
                 }
@@ -83,12 +83,12 @@ class Graph
         return new Pair(dist[numVertices-1], total_toll[numVertices-1]);
     }
 
-    private int minToll(int toll[])
+    private int minToll(int toll[], boolean visited[])
     {
         int min_toll= Integer.MAX_VALUE;
         int min_index = 0;
         for (int v =1;v<numVertices;v++){
-            if(toll[v] <= min_toll){
+            if(!visited[v] && toll[v] <= min_toll){
                 min_toll = toll[v];
                 min_index = v;
             }
